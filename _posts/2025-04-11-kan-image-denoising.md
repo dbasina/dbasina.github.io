@@ -3,9 +3,10 @@ title: "Image Denoising with Kolmogorov–Arnold Networks (KUnet)"
 date: 2025-04-11
 categories: [projects]
 tags: [computer-vision, image-denoising, KAN, UNet, attention, CVPR]
+math: true
 ---
 
-## Executive Summary
+## Summary
 
 This project explores whether **Kolmogorov–Arnold Networks (KANs)** can be made practical for high-resolution computer vision tasks.
 
@@ -147,9 +148,9 @@ KANs differ from MLPs by placing learnable spline-based activations on edges ins
 
 The Kolmogorov–Arnold representation theorem:
 
-\[
+$$
 f(\mathbf{x}) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^{n} \phi_{q,p}(x_p) \right)
-\]
+$$
 
 KANLinear layers were used selectively in token projection space —  
 balancing expressiveness and computational feasibility.
