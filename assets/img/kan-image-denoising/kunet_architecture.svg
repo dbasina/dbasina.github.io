@@ -13,6 +13,11 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+<style>
+  /* Sets what currentColor means inside this SVG */
+  #model-diagram { color: #e2e8f0; } /* slate-200 */
+  #model-diagram text { fill: currentColor; }  /* keep your existing approach */
+</style>
   <sodipodi:namedview
      id="namedview268"
      pagecolor="#ffffff"
