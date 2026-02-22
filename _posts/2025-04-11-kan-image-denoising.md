@@ -21,114 +21,231 @@ The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, achievin
 
 Notably, this was the **second fastest runtime among the top 9 entries**, demonstrating that KAN-based architectures can be competitive in both quality and efficiency when carefully engineered.
 
-## Qualitative Results (2K Preview)
+
+## Qualitative Results (2K Interactive Preview)
 
 <p style="margin-top:-0.5rem;">
-  Below are 12 noisy/denoised pairs (σ = 50 Gaussian noise).  
-  Left: noisy input · Right: denoised output (KUnet).  
-  Click any image for full resolution.
+  Toggle between noisy input (σ = 50 Gaussian noise) and denoised output (KUnet).
 </p>
 
-<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items:start; margin: 1.5rem 0;">
-  <div style="text-align:center; font-weight:600;">Noisy</div>
-  <div style="text-align:center; font-weight:600;">Denoised</div>
+<style>
+  .pair-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin:1.5rem 0;
+  }
+  @media(max-width:900px){
+    .pair-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width:600px){
+    .pair-grid{grid-template-columns:1fr;}
+  }
+  .pair-card{
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px;
+    padding:10px;
+  }
+  .pair-img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+  }
+  .pair-tabs{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin-top:8px;
+  }
+  .pair-tabs button{
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:transparent;
+    color:inherit;
+    cursor:pointer;
+    font-size:0.85rem;
+  }
+  .pair-tabs button.active{
+    border-color:rgba(255,255,255,0.5);
+  }
+</style>
+
+<div class="pair-grid">
+
+  <!-- Loop: 0000001 → 0000012 -->
 
   <!-- 0000001 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000001.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000001.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000001">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000001.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000001.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000001">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000001.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000001.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000001.png"
+         alt="Example 0000001">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000002 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000002.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000002.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000002">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000002.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000002.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000002">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000002.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000002.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000002.png"
+         alt="Example 0000002">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000003 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000003.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000003.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000003">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000003.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000003.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000003">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000003.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000003.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000003.png"
+         alt="Example 0000003">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000004 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000004.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000004.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000004">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000004.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000004.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000004">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000004.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000004.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000004.png"
+         alt="Example 0000004">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000005 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000005.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000005.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000005">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000005.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000005.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000005">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000005.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000005.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000005.png"
+         alt="Example 0000005">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000006 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000006.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000006.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000006">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000006.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000006.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000006">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000006.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000006.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000006.png"
+         alt="Example 0000006">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000007 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000007.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000007.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000007">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000007.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000007.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000007">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000007.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000007.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000007.png"
+         alt="Example 0000007">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000008 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000008.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000008.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000008">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000008.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000008.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000008">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000008.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000008.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000008.png"
+         alt="Example 0000008">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000009 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000009.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000009.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000009">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000009.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000009.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000009">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000009.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000009.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000009.png"
+         alt="Example 0000009">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000010 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000010.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000010.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000010">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000010.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000010.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000010">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000010.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000010.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000010.png"
+         alt="Example 0000010">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000011 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000011.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000011.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000011">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000011.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000011.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000011">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000011.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000011.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000011.png"
+         alt="Example 0000011">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
 
   <!-- 0000012 -->
-  <a href="/assets/img/kan-image-denoising/examples/noisy/0000012.png">
-    <img src="/assets/img/kan-image-denoising/examples/noisy/0000012.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000012">
-  </a>
-  <a href="/assets/img/kan-image-denoising/examples/denoised/0000012.png">
-    <img src="/assets/img/kan-image-denoising/examples/denoised/0000012.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000012">
-  </a>
+  <div class="pair-card">
+    <img class="pair-img" loading="lazy"
+         src="/assets/img/kan-image-denoising/examples/denoised/0000012.png"
+         data-noisy="/assets/img/kan-image-denoising/examples/noisy/0000012.png"
+         data-denoised="/assets/img/kan-image-denoising/examples/denoised/0000012.png"
+         alt="Example 0000012">
+    <div class="pair-tabs">
+      <button type="button" class="active" onclick="swapPair(this,'denoised')">Denoised</button>
+      <button type="button" onclick="swapPair(this,'noisy')">Noisy</button>
+    </div>
+  </div>
+
 </div>
+
+<script>
+  function swapPair(btn, which){
+    const card = btn.closest('.pair-card');
+    const img = card.querySelector('img');
+    img.src = (which === 'noisy') ? img.dataset.noisy : img.dataset.denoised;
+
+    const buttons = card.querySelectorAll('button');
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
 
 Across diverse scenes, the model preserves fine textures and structural details while removing heavy Gaussian noise — even at 2K resolution. Examples shown are from the DIV2K and LSDIR competition test sets. 
 
