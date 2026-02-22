@@ -7,11 +7,10 @@ math: true
 ---
 
 ## Summary
+This project investigates whether **Kolmogorov–Arnold Networks (KANs)** can be engineered to work effectively in high-resolution computer vision.
 
-This project explores whether **Kolmogorov–Arnold Networks (KANs)** can be made practical for high-resolution computer vision tasks.
-
-KANs are theoretically powerful and parameter-efficient alternatives to MLPs, but existing implementations are computationally expensive — especially for large image models.  
-To address this, I designed **KUnet**, a KAN-augmented UNet architecture engineered for 2K+ resolution image denoising.
+While KANs are theoretically expressive and parameter-efficient alternatives to MLPs, they are typically computationally expensive in practice.  
+To address this, I designed **KUnet**, a KAN-augmented UNet architecture optimized for 2K+ resolution image denoising.
 
 The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, achieving:
 
@@ -20,27 +19,119 @@ The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, achievin
 - **0.05s runtime per image**
 - **9th place (development phase)**
 
-Notably, this was the **second fastest runtime** among the top 9 entries.
+Notably, this was the **second fastest runtime among the top 9 entries**, demonstrating that KAN-based architectures can be competitive in both quality and efficiency when carefully engineered.
 
----
+## Qualitative Results (2K Preview)
 
-## Qualitative Results
+<p style="margin-top:-0.5rem;">
+  Below are 12 noisy/denoised pairs (σ = 50 Gaussian noise).  
+  Left: noisy input · Right: denoised output (KUnet).  
+  Click any image for full resolution.
+</p>
 
-<figure style="margin: 2rem 0;">
-  <img 
-    src="/assets/img/kan-image-denoising/ntire_2k_results.png"
-    style="width: 100%; height: auto;"
-    alt="2K denoising results"
-  >
-  <figcaption>
-    Example from the NTIRE Denoise50 dataset (σ = 50 Gaussian noise).  
-    Left: noisy 2K image. Right: KUnet output.
-  </figcaption>
-</figure>
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items:start; margin: 1.5rem 0;">
+  <div style="text-align:center; font-weight:600;">Noisy</div>
+  <div style="text-align:center; font-weight:600;">Denoised</div>
 
-The model preserves fine textures and color structure while removing heavy Gaussian noise on high-resolution images.
+  <!-- 0000001 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000001.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000001.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000001">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000001.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000001.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000001">
+  </a>
 
----
+  <!-- 0000002 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000002.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000002.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000002">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000002.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000002.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000002">
+  </a>
+
+  <!-- 0000003 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000003.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000003.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000003">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000003.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000003.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000003">
+  </a>
+
+  <!-- 0000004 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000004.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000004.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000004">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000004.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000004.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000004">
+  </a>
+
+  <!-- 0000005 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000005.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000005.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000005">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000005.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000005.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000005">
+  </a>
+
+  <!-- 0000006 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000006.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000006.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000006">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000006.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000006.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000006">
+  </a>
+
+  <!-- 0000007 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000007.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000007.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000007">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000007.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000007.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000007">
+  </a>
+
+  <!-- 0000008 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000008.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000008.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000008">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000008.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000008.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000008">
+  </a>
+
+  <!-- 0000009 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000009.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000009.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000009">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000009.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000009.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000009">
+  </a>
+
+  <!-- 0000010 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000010.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000010.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000010">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000010.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000010.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000010">
+  </a>
+
+  <!-- 0000011 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000011.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000011.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000011">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000011.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000011.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000011">
+  </a>
+
+  <!-- 0000012 -->
+  <a href="/assets/img/kan-image-denoising/examples/noisy/0000012.png">
+    <img src="/assets/img/kan-image-denoising/examples/noisy/0000012.png" style="width:100%; height:auto;" loading="lazy" alt="Noisy 0000012">
+  </a>
+  <a href="/assets/img/kan-image-denoising/examples/denoised/0000012.png">
+    <img src="/assets/img/kan-image-denoising/examples/denoised/0000012.png" style="width:100%; height:auto;" loading="lazy" alt="Denoised 0000012">
+  </a>
+</div>
+
+Across diverse scenes, the model preserves fine textures and structural details while removing heavy Gaussian noise — even at 2K resolution. Examples shown are from the DIV2K and LSDIR competition test sets. 
+
 
 ## Architecture Overview
 
@@ -63,7 +154,7 @@ The key challenge was making KANs computationally feasible at scale.
 
 ---
 
-# Design Decisions & Engineering Insights
+# Architectural & Engineering Insights
 
 ## 1. UNet + Skip Connections
 
@@ -152,14 +243,15 @@ $$
 f(\mathbf{x}) = \sum_{q=1}^{2n+1} \Phi_q \left( \sum_{p=1}^{n} \phi_{q,p}(x_p) \right)
 $$
 
-KANLinear layers were used selectively in token projection space —  
-balancing expressiveness and computational feasibility.
+KANLinear layers were used selectively in token projection space, balancing expressiveness and computational feasibility.
 
 This hybridization allowed us to exploit KAN advantages without overwhelming runtime costs.
 
 ---
 
 # Competition Results — NTIRE CVPR 2025
+
+The model was evaluated on the DIV2K and LSDIR datasets under the NTIRE 2025 Denoise50 benchmark.
 
 | Rank | User        | PSNR  | SSIM | Runtime (s) |
 |------|------------|-------|------|-------------|
@@ -185,6 +277,22 @@ This demonstrates that KANs can be competitive in high-resolution vision tasks w
 - Careful engineering can close the gap to SOTA while preserving runtime efficiency.
 
 ---
+
+# Technical Stack & Infrastructure
+
+**Core Technologies**
+- Python
+- PyTorch
+- Weights & Biases (experiment tracking and logging)
+- SLURM (cluster job scheduling)
+- Python plotting libraries (Matplotlib, Seaborn)
+
+**Training Infrastructure**
+- 4 × NVIDIA A100 GPUs
+- Distributed multi-GPU training via SLURM-managed research cluster
+
+The model was trained on a SLURM-managed research cluster using 4 × NVIDIA A100 GPUs.  
+Experiment tracking, hyperparameter sweeps, and metric logging were managed through Weights & Biases to enable reproducible large-scale experimentation.
 
 # Future Directions
 
