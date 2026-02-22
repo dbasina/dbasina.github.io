@@ -181,14 +181,7 @@
        gradientTransform="scale(0.40915855,2.4440403)"
        gradientUnits="userSpaceOnUse" />
   </defs>
-  <text
-     x="758.448"
-     y="9.1199999"
-     text-anchor="middle"
-     class="text-2xl font-bold"
-     fill="#1e293b"
-     data-fg-dplt13="1.17:1.16134:/src/app/components/ModelDiagram.tsx:72:7:2322:128:e:text:t"
-     id="text15">KUnet Architecture</text>
+
   <g
      data-fg-dplt17="1.17:1.16134:/src/app/components/ModelDiagram.tsx:85:11:2799:2681:e:g:xtetetetxtetxtxtx"
      id="g33"
