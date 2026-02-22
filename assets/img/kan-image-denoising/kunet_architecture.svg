@@ -53,7 +53,7 @@
        data-fg-dplt7="1.17:1.16134:/src/app/components/ModelDiagram.tsx:47:9:1750:238:e:marker:e">
       <polygon
          points="10,3 0,6 0,0 "
-         fill="#64748b"
+         fill="currentColor" opacity="0.75"
          data-fg-dplt8="1.17:1.16134:/src/app/components/ModelDiagram.tsx:55:11:1920:50:e:polygon"
          id="polygon7" />
     </marker>
@@ -223,7 +223,7 @@
        y="300.39999"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt23="1.17:1.16134:/src/app/components/ModelDiagram.tsx:122:13:3839:234:e:text:x"
        id="text23">Input</text>
     <text
@@ -231,7 +231,7 @@
        y="509.60001"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt27="1.17:1.16134:/src/app/components/ModelDiagram.tsx:133:17:4137:267:e:text:tx"
        id="text25">C:3</text>
     <text
@@ -239,7 +239,7 @@
        y="524.59998"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt30="1.17:1.16134:/src/app/components/ModelDiagram.tsx:142:17:4421:274:e:text:xtx"
        id="text27">256×256</text>
     <line
@@ -247,7 +247,7 @@
        y1="400"
        x2="200"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt37="1.17:1.16134:/src/app/components/ModelDiagram.tsx:157:17:4877:265:e:line"
@@ -257,7 +257,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt38="1.17:1.16134:/src/app/components/ModelDiagram.tsx:166:17:5159:273:e:text:x"
        id="text31">Conv+Pool</text>
   </g>
@@ -302,7 +302,7 @@
        y="345.20001"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt23="1.17:1.16134:/src/app/components/ModelDiagram.tsx:122:13:3839:234:e:text:x"
        id="text41">Down1</text>
     <text
@@ -310,7 +310,7 @@
        y="464.79999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt27="1.17:1.16134:/src/app/components/ModelDiagram.tsx:133:17:4137:267:e:text:tx"
        id="text43">C:64</text>
     <text
@@ -318,7 +318,7 @@
        y="479.79999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt30="1.17:1.16134:/src/app/components/ModelDiagram.tsx:142:17:4421:274:e:text:xtx"
        id="text45">128×128</text>
     <line
@@ -326,7 +326,7 @@
        y1="400"
        x2="350"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt37="1.17:1.16134:/src/app/components/ModelDiagram.tsx:157:17:4877:265:e:line"
@@ -336,7 +336,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt38="1.17:1.16134:/src/app/components/ModelDiagram.tsx:166:17:5159:273:e:text:x"
        id="text49">MaxPool</text>
   </g>
@@ -381,7 +381,7 @@
        y="367.60001"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt23="1.17:1.16134:/src/app/components/ModelDiagram.tsx:122:13:3839:234:e:text:x"
        id="text59">Down2</text>
     <text
@@ -389,7 +389,7 @@
        y="442.39999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt27="1.17:1.16134:/src/app/components/ModelDiagram.tsx:133:17:4137:267:e:text:tx"
        id="text61">C:128</text>
     <text
@@ -397,7 +397,7 @@
        y="457.39999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt30="1.17:1.16134:/src/app/components/ModelDiagram.tsx:142:17:4421:274:e:text:xtx"
        id="text63">64×64</text>
     <line
@@ -405,7 +405,7 @@
        y1="400"
        x2="500"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt37="1.17:1.16134:/src/app/components/ModelDiagram.tsx:157:17:4877:265:e:line"
@@ -415,7 +415,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt38="1.17:1.16134:/src/app/components/ModelDiagram.tsx:166:17:5159:273:e:text:x"
        id="text67">MaxPool</text>
   </g>
@@ -460,7 +460,7 @@
        y="370"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt23="1.17:1.16134:/src/app/components/ModelDiagram.tsx:122:13:3839:234:e:text:x"
        id="text77">Down3</text>
     <text
@@ -468,7 +468,7 @@
        y="440"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt27="1.17:1.16134:/src/app/components/ModelDiagram.tsx:133:17:4137:267:e:text:tx"
        id="text79">C:256</text>
     <text
@@ -476,7 +476,7 @@
        y="455"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt30="1.17:1.16134:/src/app/components/ModelDiagram.tsx:142:17:4421:274:e:text:xtx"
        id="text81">32×32</text>
     <line
@@ -484,7 +484,7 @@
        y1="400"
        x2="650"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt37="1.17:1.16134:/src/app/components/ModelDiagram.tsx:157:17:4877:265:e:line"
@@ -494,7 +494,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt38="1.17:1.16134:/src/app/components/ModelDiagram.tsx:166:17:5159:273:e:text:x"
        id="text85">MaxPool</text>
   </g>
@@ -539,7 +539,7 @@
        y="370"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt23="1.17:1.16134:/src/app/components/ModelDiagram.tsx:122:13:3839:234:e:text:x"
        id="text95">Down4</text>
     <text
@@ -547,7 +547,7 @@
        y="440"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt27="1.17:1.16134:/src/app/components/ModelDiagram.tsx:133:17:4137:267:e:text:tx"
        id="text97">C:512</text>
     <text
@@ -555,7 +555,7 @@
        y="455"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt30="1.17:1.16134:/src/app/components/ModelDiagram.tsx:142:17:4421:274:e:text:xtx"
        id="text99">16×16</text>
   </g>
@@ -568,7 +568,7 @@
        y1="400"
        x2="720"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt43="1.17:1.16134:/src/app/components/ModelDiagram.tsx:188:9:5761:275:e:line"
@@ -610,7 +610,7 @@
        y="335"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt48="1.17:1.16134:/src/app/components/ModelDiagram.tsx:228:9:6754:128:e:text:t"
        id="text111">Bottleneck</text>
     <text
@@ -618,7 +618,7 @@
        y="465"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt52="1.17:1.16134:/src/app/components/ModelDiagram.tsx:234:13:6943:135:e:text:tx"
        id="text113">C:1024</text>
     <text
@@ -626,7 +626,7 @@
        y="480"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt55="1.17:1.16134:/src/app/components/ModelDiagram.tsx:237:13:7091:147:e:text:xtx"
        id="text115">8×8</text>
     <rect
@@ -690,7 +690,7 @@
        y1="400"
        x2="875"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt72="1.17:1.16134:/src/app/components/ModelDiagram.tsx:282:9:8367:183:e:line"
@@ -737,7 +737,7 @@
        y="370"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt81="1.17:1.16134:/src/app/components/ModelDiagram.tsx:339:13:9951:234:e:text:x"
        id="text139">Up1</text>
     <text
@@ -745,7 +745,7 @@
        y="440"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt85="1.17:1.16134:/src/app/components/ModelDiagram.tsx:350:17:10249:267:e:text:tx"
        id="text141">C:512</text>
     <text
@@ -753,7 +753,7 @@
        y="455"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt88="1.17:1.16134:/src/app/components/ModelDiagram.tsx:359:17:10533:274:e:text:xtx"
        id="text143">16×16</text>
     <line
@@ -761,7 +761,7 @@
        y1="400"
        x2="1045.96"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt95="1.17:1.16134:/src/app/components/ModelDiagram.tsx:374:17:10987:265:e:line"
@@ -771,7 +771,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt96="1.17:1.16134:/src/app/components/ModelDiagram.tsx:383:17:11269:246:e:text:t"
        id="text147">Upsample</text>
   </g>
@@ -816,7 +816,7 @@
        y="370"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt81="1.17:1.16134:/src/app/components/ModelDiagram.tsx:339:13:9951:234:e:text:x"
        id="text157">Up2</text>
     <text
@@ -824,7 +824,7 @@
        y="440"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt85="1.17:1.16134:/src/app/components/ModelDiagram.tsx:350:17:10249:267:e:text:tx"
        id="text159">C:256</text>
     <text
@@ -832,7 +832,7 @@
        y="455"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt88="1.17:1.16134:/src/app/components/ModelDiagram.tsx:359:17:10533:274:e:text:xtx"
        id="text161">32×32</text>
     <line
@@ -840,7 +840,7 @@
        y1="400"
        x2="1195"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt95="1.17:1.16134:/src/app/components/ModelDiagram.tsx:374:17:10987:265:e:line"
@@ -850,7 +850,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt96="1.17:1.16134:/src/app/components/ModelDiagram.tsx:383:17:11269:246:e:text:t"
        id="text165">Upsample</text>
   </g>
@@ -895,7 +895,7 @@
        y="367.60001"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt81="1.17:1.16134:/src/app/components/ModelDiagram.tsx:339:13:9951:234:e:text:x"
        id="text175">Up3</text>
     <text
@@ -903,7 +903,7 @@
        y="442.39999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt85="1.17:1.16134:/src/app/components/ModelDiagram.tsx:350:17:10249:267:e:text:tx"
        id="text177">C:128</text>
     <text
@@ -911,7 +911,7 @@
        y="457.39999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt88="1.17:1.16134:/src/app/components/ModelDiagram.tsx:359:17:10533:274:e:text:xtx"
        id="text179">64×64</text>
     <line
@@ -919,7 +919,7 @@
        y1="400"
        x2="1355"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt95="1.17:1.16134:/src/app/components/ModelDiagram.tsx:374:17:10987:265:e:line"
@@ -929,7 +929,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt96="1.17:1.16134:/src/app/components/ModelDiagram.tsx:383:17:11269:246:e:text:t"
        id="text183">Upsample</text>
   </g>
@@ -974,7 +974,7 @@
        y="345.20001"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt81="1.17:1.16134:/src/app/components/ModelDiagram.tsx:339:13:9951:234:e:text:x"
        id="text193">Up4</text>
     <text
@@ -982,7 +982,7 @@
        y="464.79999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt85="1.17:1.16134:/src/app/components/ModelDiagram.tsx:350:17:10249:267:e:text:tx"
        id="text195">C:64</text>
     <text
@@ -990,7 +990,7 @@
        y="479.79999"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt88="1.17:1.16134:/src/app/components/ModelDiagram.tsx:359:17:10533:274:e:text:xtx"
        id="text197">128×128</text>
     <line
@@ -998,7 +998,7 @@
        y1="400"
        x2="1515"
        y2="400"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt95="1.17:1.16134:/src/app/components/ModelDiagram.tsx:374:17:10987:265:e:line"
@@ -1008,7 +1008,7 @@
        y="395"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt96="1.17:1.16134:/src/app/components/ModelDiagram.tsx:383:17:11269:246:e:text:t"
        id="text201">Upsample</text>
   </g>
@@ -1053,7 +1053,7 @@
        y="300.39999"
        text-anchor="middle"
        class="text-xs font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt81="1.17:1.16134:/src/app/components/ModelDiagram.tsx:339:13:9951:234:e:text:x"
        id="text211">Output</text>
     <text
@@ -1061,7 +1061,7 @@
        y="509.60001"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt85="1.17:1.16134:/src/app/components/ModelDiagram.tsx:350:17:10249:267:e:text:tx"
        id="text213">C:3</text>
     <text
@@ -1069,7 +1069,7 @@
        y="524.59998"
        text-anchor="middle"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt88="1.17:1.16134:/src/app/components/ModelDiagram.tsx:359:17:10533:274:e:text:xtx"
        id="text215">256×256</text>
   </g>
@@ -1141,7 +1141,7 @@
        x="0"
        y="0"
        class="text-sm font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt104="1.17:1.16134:/src/app/components/ModelDiagram.tsx:427:9:12755:101:e:text:t"
        id="text235">Legend:</text>
     <line
@@ -1149,7 +1149,7 @@
        y1="15"
        x2="40"
        y2="15"
-       stroke="#64748b"
+       stroke="currentColor" opacity="0.55"
        stroke-width="2"
        marker-end="url(#arrowhead)"
        data-fg-dplt106="1.17:1.16134:/src/app/components/ModelDiagram.tsx:431:9:12874:100:e:line"
@@ -1158,7 +1158,7 @@
        x="50"
        y="20"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt107="1.17:1.16134:/src/app/components/ModelDiagram.tsx:432:9:12983:91:e:text:t"
        id="text239">Data Flow</text>
     <line
@@ -1176,7 +1176,7 @@
        x="50"
        y="40"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt110="1.17:1.16134:/src/app/components/ModelDiagram.tsx:437:9:13224:97:e:text:t"
        id="text243">Skip Connection</text>
     <rect
@@ -1194,7 +1194,7 @@
        x="40"
        y="62"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt113="1.17:1.16134:/src/app/components/ModelDiagram.tsx:442:9:13449:106:e:text:t"
        id="text247">Self-Attention (8 heads)</text>
     <rect
@@ -1212,7 +1212,7 @@
        x="40"
        y="87"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt116="1.17:1.16134:/src/app/components/ModelDiagram.tsx:447:9:13683:99:e:text:t"
        id="text251">KAN Linear Layers</text>
   </g>
@@ -1224,35 +1224,35 @@
        x="0"
        y="0"
        class="text-sm font-semibold"
-       fill="#1e293b"
+       fill="currentColor"
        data-fg-dplt121="1.17:1.16134:/src/app/components/ModelDiagram.tsx:455:11:13907:109:e:text:t"
        id="text255">Components:</text>
     <text
        x="0"
        y="20"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt123="1.17:1.16134:/src/app/components/ModelDiagram.tsx:458:11:14027:128:e:text:t"
        id="text257">• DepthwiseSeparableConv + LayerNorm + ReLU</text>
     <text
        x="0"
        y="37"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt125="1.17:1.16134:/src/app/components/ModelDiagram.tsx:461:11:14166:116:e:text:t"
        id="text259">• PatchTokenizer (patch_size=2)</text>
     <text
        x="0"
        y="54"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt127="1.17:1.16134:/src/app/components/ModelDiagram.tsx:464:11:14293:124:e:text:t"
        id="text261">• Multi-head Attention (token_dim=1024)</text>
     <text
        x="0"
        y="71"
        class="text-xs"
-       fill="#64748b"
+       fill="currentColor" opacity="0.75"
        data-fg-dplt129="1.17:1.16134:/src/app/components/ModelDiagram.tsx:467:11:14428:131:e:text:t"
        id="text263">• KAN: Learnable B-spline activation functions</text>
   </g>
