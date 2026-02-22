@@ -9,17 +9,13 @@ tags: [computer-vision, denoising, KAN, UNet, attention]
 Built a KAN-augmented UNet denoiser for high-resolution (2K+) images by combining skip connections, depthwise separable convolutions, tokenization + self-attention, and KAN-based token projection layers. The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, reaching **28.91 PSNR** and **0.05s runtime per image** in the development phase (ranked **9th**).
 
 ## Architecture
-<div style="text-align: center; margin: 2rem 0;">
+<figure style="margin: 2rem 0;">
   <img 
-    src="/assets/img/kan-image-denoising/kunet_architecture.svg" 
-    alt="KUnet + KAN architecture diagram"
-    style="width: 100%; max-width: 1100px;"
+    src="/assets/img/kan-image-denoising/kunet_architecture.svg"
+    style="width: 100%; height: auto;"
+    alt="KUnet architecture"
   >
-</div>
-
-<p style="text-align:center; font-size: 0.95rem; opacity: 0.8;">
-  Figure 1: KUnet architecture with tokenized latent processing and KAN projection layers.
-</p>
+</figure>
 
 ## Key Ideas
 - **UNet + skip connections** to preserve fine detail during reconstruction
