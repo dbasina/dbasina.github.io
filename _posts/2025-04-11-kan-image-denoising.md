@@ -6,7 +6,7 @@ tags: [computer-vision, denoising, KAN, UNet, attention]
 ---
 
 ## Executive Summary
-I built a KAN-augmented UNet denoiser for high-resolution (2K+) images by combining skip connections, depthwise separable convolutions, tokenization + self-attention, and KAN-based token projection layers. The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, reaching **28.91 PSNR** and **0.05s runtime per image** in the development phase (ranked **9th**).
+Built a KAN-augmented UNet denoiser for high-resolution (2K+) images by combining skip connections, depthwise separable convolutions, tokenization + self-attention, and KAN-based token projection layers. The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, reaching **28.91 PSNR** and **0.05s runtime per image** in the development phase (ranked **9th**).
 
 ## Architecture
 <p align="center">
