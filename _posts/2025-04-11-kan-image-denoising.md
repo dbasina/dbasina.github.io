@@ -423,4 +423,4 @@ Experiment tracking, hyperparameter sweeps, and metric logging were managed thro
 ## Code
 
 GitHub:  
-https://github.com/dbasina/KUnet_Dn50_Competition
+[KUnet on GitHub](https://github.com/dbasina/KUnet_Dn50_Competition)

@@ -165,4 +165,4 @@ These findings are directly applicable to teams building real-world medical ML s
 ## Code
 
 Repository:  
-https://github.com/dbasina/MedMNIST-experiments
+[MedMNIST Experiments on GitHub](https://github.com/dbasina/MedMNIST-experiments)
