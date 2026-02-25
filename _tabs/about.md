@@ -6,14 +6,19 @@ order: 1
 
 Hi, I’m **Divesh Basina**.
 
-I’m a graduate student at Arizona State University and a researcher under professor Kookjin Lee. My work focuses on designing and understanding neural network architectures for computer vision.
+I build machine learning systems that are both principled and practical.
 
-My current research explores:
-- Kolmogorov Arnold Networks (KANs)
-- Implicit neural networks
-- Medical imaging models
-- Architecture-level inductive biases
-- Real-time vision systems
+I’m currently a graduate student at Arizona State University pursuing my Master's thesis in Implicit Neural Representation. I work on neural network architectures for image quality improvement, medical imaging, semantic and stance detection from texts. My focus is on understanding *why* models work, not just pushing benchmark numbers — and then translating that understanding into systems that are efficient, reliable, and deployable.
 
-I’m particularly interested in foundational architectural design that improves generalization and efficiency.
-Outside of research, I enjoy running and strategy-based video games with dynamic economies.
+My work spans:
+
+- Deep learning architecture design  
+- Medical imaging and high-fidelity visual models  
+- Image rendering and quality enhancement  
+- Systems-level foundations (operating systems, memory management, virtualization)  
+
+I’ve evaluated emerging architectures like Kolmogorov-Arnold Networks, built operating system components in xv6, and developed end-to-end ML pipelines — from experimentation to measurable results. That combination of low-level systems knowledge and high-level modeling lets me think holistically about performance, scalability, and real-world constraints.
+
+I’m currently looking for industry roles where I can contribute to applied AI systems that make a tangible impact.
+
+Outside of work, I enjoy yoga and video games with economies.
