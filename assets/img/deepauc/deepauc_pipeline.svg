@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="700" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for styles -->
+  <defs>
+    <style>
+      .box-text { font-family: Arial, sans-serif; font-size: 12px; fill: #1f2937; }
+      .title-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1f2937; }
+      .small-text { font-family: Arial, sans-serif; font-size: 10px; fill: #4b5563; }
+      .badge-text { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: white; }
+      .label-text { font-family: Arial, sans-serif; font-size: 9px; fill: #4b5563; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#9ca3af" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="25" class="title-text" text-anchor="middle" font-size="16" font-weight="bold">
+    Two-Stage Deep AUC Maximization Pipeline
+  </text>
+
+  <!-- Input Box -->
+  <rect x="200" y="50" width="200" height="40" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5" rx="4" />
+  <text x="300" y="68" class="box-text" text-anchor="middle" font-weight="bold">Input: Chest X-Ray Images</text>
+  <text x="300" y="82" class="small-text" text-anchor="middle">224×224 px, CheXpert Dataset</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 300 90 L 300 115" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+
+  <!-- Stage 1 Box -->
+  <rect x="100" y="115" width="400" height="110" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" rx="6" />
+  <rect x="115" y="125" width="60" height="20" fill="#2563eb" rx="3" />
+  <text x="145" y="138" class="badge-text" text-anchor="middle">Stage 1</text>
+  
+  <text x="300" y="153" class="title-text" text-anchor="middle">Multi-Label Classification (2 epochs)</text>
+  
+  <!-- Stage 1 Details - Left Column -->
+  <text x="120" y="173" class="label-text">Model: DenseNet-169</text>
+  <text x="120" y="188" class="label-text">Loss: Cross Entropy</text>
+  <text x="120" y="203" class="label-text">LR: 1e-4</text>
+  
+  <!-- Stage 1 Details - Right Column -->
+  <text x="320" y="173" class="label-text">Output: 5 classes</text>
+  <text x="320" y="188" class="label-text">Optimizer: AdamW</text>
+  <text x="320" y="203" class="label-text">Scheduler: Cosine</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 300 225 L 300 250" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+
+  <!-- Checkpoint Box -->
+  <rect x="150" y="250" width="300" height="30" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,4" rx="4" />
+  <text x="300" y="270" class="small-text" text-anchor="middle" font-weight="600" fill="#15803d">
+    Save best model → Replace final layer (5→1 output)
+  </text>
+
+  <!-- Arrow 3 -->
+  <path d="M 300 280 L 300 305" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+
+  <!-- Stage 2 Box -->
+  <rect x="100" y="305" width="400" height="165" fill="#faf5ff" stroke="#a855f7" stroke-width="2" rx="6" />
+  <rect x="115" y="315" width="60" height="20" fill="#9333ea" rx="3" />
+  <text x="145" y="328" class="badge-text" text-anchor="middle">Stage 2</text>
+  
+  <text x="300" y="343" class="title-text" text-anchor="middle">Deep AUC Maximization (2 epochs × 5 models)</text>
+  
+  <!-- Stage 2 Details - Left Column -->
+  <text x="120" y="363" class="label-text">Strategy: 5 independent models</text>
+  <text x="120" y="378" class="label-text">Loss: AUC-M Loss</text>
+  <text x="120" y="393" class="label-text">LR: 0.001</text>
+  
+  <!-- Stage 2 Details - Right Column -->
+  <text x="320" y="363" class="label-text">Output: Binary (per model)</text>
+  <text x="320" y="378" class="label-text">Optimizer: PESG</text>
+  <text x="320" y="393" class="label-text">Margin: 1.0</text>
+
+  <!-- Disease Classifiers -->
+  <line x1="115" y1="405" x2="485" y2="405" stroke="#e9d5ff" stroke-width="1" />
+  <text x="120" y="420" class="label-text" font-weight="600">Disease-Specific Classifiers:</text>
+  
+  <!-- 5 Disease boxes -->
+  <rect x="115" y="425" width="90" height="30" fill="white" stroke="#e9d5ff" stroke-width="1" rx="3" />
+  <text x="160" y="444" class="label-text" text-anchor="middle">Cardiomegaly</text>
+  
+  <rect x="210" y="425" width="90" height="30" fill="white" stroke="#e9d5ff" stroke-width="1" rx="3" />
+  <text x="255" y="444" class="label-text" text-anchor="middle">Edema</text>
+  
+  <rect x="305" y="425" width="90" height="30" fill="white" stroke="#e9d5ff" stroke-width="1" rx="3" />
+  <text x="350" y="444" class="label-text" text-anchor="middle">Consolidation</text>
+  
+  <rect x="400" y="425" width="90" height="30" fill="white" stroke="#e9d5ff" stroke-width="1" rx="3" />
+  <text x="445" y="444" class="label-text" text-anchor="middle">Atelectasis</text>
+
+  <rect x="162" y="458" width="90" height="30" fill="white" stroke="#e9d5ff" stroke-width="1" rx="3" />
+  <text x="207" y="477" class="label-text" text-anchor="middle">Pleural Effusion</text>
+
+  <!-- Arrow 4 -->
+  <path d="M 300 490 L 300 515" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+
+  <!-- Ensemble Output Box -->
+  <rect x="150" y="515" width="300" height="50" fill="#f3f4f6" stroke="#1f2937" stroke-width="2" rx="4" />
+  <text x="300" y="538" class="title-text" text-anchor="middle">Ensemble Prediction</text>
+  <text x="300" y="553" class="small-text" text-anchor="middle">
+    5 binary predictions combined for multi-label output
+  </text>
+
+  <!-- Caption -->
+  <text x="300" y="595" class="small-text" text-anchor="middle" font-size="9" fill="#6b7280">
+    Figure: Two-stage training pipeline combining cross-entropy pre-training
+  </text>
+  <text x="300" y="607" class="small-text" text-anchor="middle" font-size="9" fill="#6b7280">
+    with disease-specific AUC maximization
+  </text>
+</svg>
