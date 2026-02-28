@@ -7,8 +7,9 @@ order: 1
 Hi, I’m **Divesh Basina**.
 
 I build machine learning systems that are both principled and practical.
-
 I’m currently a graduate student at Arizona State University pursuing my Master's thesis in Implicit Neural Representation. I work on neural network architectures for image quality improvement, medical imaging, semantic and stance detection from texts. My focus is on understanding *why* models work, not just pushing benchmark numbers — and then translating that understanding into systems that are efficient, reliable, and deployable.
+
+This page serves as a quick summary for the work I've done and showcases important results and core concepts that were used to solve relevant problems. 
 
 My work spans:
 

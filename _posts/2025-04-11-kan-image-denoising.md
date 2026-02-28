@@ -4,6 +4,8 @@ date: 2025-04-11
 categories: [projects]
 tags: [computer-vision, image-denoising, KAN, UNet, attention, CVPR]
 math: true
+image: /assets/img/kan-image-denoising/examples/comparision.png
+alt: Noisy(left) vs Denoised image(right) obtained from the KAN-Denoiser
 ---
 
 ## Summary
@@ -21,7 +23,7 @@ The model was submitted to the **NTIRE CVPR 2025 Denoise50 Challenge**, achievin
 
 Notably, this was the **second fastest runtime among the top 9 entries**, demonstrating that KAN-based architectures can be competitive in both quality and efficiency when carefully engineered.
 
-
+[📄 Download Full Paper (PDF)](/assets/papers/kan-denoising.pdf){: .btn .btn-primary }
 ## Qualitative Results (2K Interactive Preview)
 
 <p style="margin-top:-0.5rem;">

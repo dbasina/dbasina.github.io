@@ -4,6 +4,9 @@ date: 2025-10-18
 categories: [projects]
 tags: [computer-vision, medical-imaging, transfer-learning, transformers, ResNet, benchmarking]
 math: false
+image:
+  path: /assets/img/medmnist-transfer/in1k_resnet_vs_swinb_12plots.png
+  alt: Transfer-learning-improvements
 ---
 
 ## Overview
